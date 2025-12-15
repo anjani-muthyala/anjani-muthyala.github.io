@@ -1,0 +1,71 @@
+# Personal Blog Configuration
+title: "Anjani Kumar Muthyala"
+subtitle: "DevOps Engineer & AI Enthusiast"
+description: "Exploring DevOps, Cloud Technologies, AI/ML, and sharing insights from my journey in technology"
+author: "Anjani Kumar Muthyala"
+email: "muthyala.anjani@gmail.com"
+url: "https://anjani.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Social media links
+social:
+  github: anjanikumarmuthyala
+  twitter: anjanikumar_m
+  linkedin: anjani-kumar-muthyala
+
+# SEO settings
+google_analytics: # Add your Google Analytics ID here
+twitter:
+  username: anjanikumar_m
+  card: summary
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Timezone
+timezone: America/New_York
