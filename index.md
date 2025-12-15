@@ -5,8 +5,47 @@ title: "Welcome to Your Personal Blog"
 
 <div class="hero">
     <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
+    <p>Senior DevOps Engineer at Verizon | AI Enthusiast | Cloud Infrastructure Specialist</p>
+    <p style="margin-top: 1rem;">{{ site.description }}</p>
 </div>
+
+<section class="about-preview" style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 3rem;">
+    <h2>About Me</h2>
+    <p>I'm a Senior DevOps Engineer at Verizon with over 8 years of experience in cloud infrastructure, automation, and emerging AI technologies. Currently, I'm passionate about advancing AI-driven automation in DevOps, particularly in autonomous planning, validation, and remediation systems.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; text-align: center;">
+            <i class="fas fa-robot" style="color: #2563eb; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+            <h4 style="margin: 0 0 0.5rem 0;">Agentic AI</h4>
+            <p style="margin: 0; font-size: 0.875rem; color: #64748b;">AWS Bedrock workflows for autonomous infrastructure</p>
+        </div>
+        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; text-align: center;">
+            <i class="fas fa-cloud" style="color: #2563eb; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+            <h4 style="margin: 0 0 0.5rem 0;">Cloud Infrastructure</h4>
+            <p style="margin: 0; font-size: 0.875rem; color: #64748b;">AWS, GCP, Kubernetes, Docker orchestration</p>
+        </div>
+        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; text-align: center;">
+            <i class="fas fa-cogs" style="color: #2563eb; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+            <h4 style="margin: 0 0 0.5rem 0;">DevOps Automation</h4>
+            <p style="margin: 0; font-size: 0.875rem; color: #64748b;">CI/CD, Ansible, Terraform, Jenkins</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 1.5rem;">
+        <h4>Certifications</h4>
+        <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+            <span style="background: #e2e8f0; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem;">Google Cloud Gen AI Leader</span>
+            <span style="background: #e2e8f0; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem;">Red Hat Ansible Specialist</span>
+            <span style="background: #e2e8f0; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.75rem;">AWS Solutions Architect</span>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="{{ '/about' | relative_url }}" class="btn-secondary">
+            Learn More About Me <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
 
 <section class="recent-posts">
     <h2>Recent Posts</h2>
@@ -75,14 +114,24 @@ title: "Welcome to Your Personal Blog"
 </section>
 
 <section class="about-preview" style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 3rem; border-radius: 8px; margin: 3rem 0; text-align: center;">
-    <h2>About This Blog</h2>
-    <p style="font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 1rem auto;">
-        Welcome to my personal blog where I share thoughts, experiences, and insights on various topics. 
-        This is a space for exploration, learning, and connecting with like-minded individuals.
-    </p>
-    <a href="{{ '/about' | relative_url }}" class="btn-secondary" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #2563eb; color: white; border-radius: 8px; text-decoration: none; transition: all 0.3s ease;">
-        Learn More About Me
-    </a>
+    <h2>What You'll Find Here</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div>
+            <i class="fas fa-brain" style="color: #2563eb; font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>AI & Automation</h3>
+            <p style="color: #64748b;">Exploring AI applications in infrastructure, GenAI workflows, and autonomous system management</p>
+        </div>
+        <div>
+            <i class="fas fa-code" style="color: #2563eb; font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>DevOps Insights</h3>
+            <p style="color: #64748b;">Real-world DevOps solutions, best practices, and lessons learned from production environments</p>
+        </div>
+        <div>
+            <i class="fas fa-tools" style="color: #2563eb; font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>Tools & Technologies</h3>
+            <p style="color: #64748b;">Hands-on guides, tool reviews, and technical tutorials for modern infrastructure</p>
+        </div>
+    </div>
 </section>
 
 <style>
