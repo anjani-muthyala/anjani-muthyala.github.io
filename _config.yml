@@ -10,7 +10,7 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -30,7 +30,31 @@ social:
 google_analytics: # Add your Google Analytics ID here
 twitter:
   username: anjanikumar_m
-  card: summary
+  card: summary_large_image
+author:
+  name: Anjani Kumar Muthyala
+  twitter: anjanikumar_m
+  picture: /assets/images/profile.jpg
+
+# SEO plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Open Graph defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-image.jpg
+      twitter:
+        card: summary_large_image
+
+# Site verification (add your codes when you get them)
+google_site_verification:
+bing_site_verification:
+yandex_site_verification:
 
 # Exclude from processing
 exclude:

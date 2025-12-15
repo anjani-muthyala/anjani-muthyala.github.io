@@ -1,7 +1,10 @@
 ---
 layout: default
-title: "About"
+title: "About Anjani Kumar Muthyala - DevOps Engineer & AI Leader"
+description: "Learn about Anjani Kumar Muthyala, Senior DevOps Engineer at Verizon with 8+ years experience in AWS, Kubernetes, AI automation, and cloud infrastructure."
 permalink: /about/
+keywords: "DevOps engineer, AWS expert, Kubernetes specialist, AI automation, cloud infrastructure, Verizon"
+image: /assets/images/og-image.jpg
 ---
 
 <div style="max-width: 800px; margin: 0 auto;">
@@ -125,6 +128,11 @@ permalink: /about/
                     <i class="fas fa-envelope"></i> Email
                 </a>
             {% endif %}
+            
+            <a href="{{ '/assets/AnjaniKumar_Muthyala_Resume.pdf' | relative_url }}" target="_blank" rel="noopener"
+               style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: #2563eb; color: white; border-radius: 8px; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
         </div>
     </div>
 
