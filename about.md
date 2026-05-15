@@ -94,6 +94,7 @@ keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, about, DevOps e
         <div class="cert-section" style="margin-top:2rem;">
             <h3>Certifications</h3>
             <div style="display:flex;justify-content:center;gap:0.75rem;margin-top:1rem;flex-wrap:wrap;">
+                <span class="cert-badge"><i class="fas fa-award"></i> Google AI Professional</span>
                 <span class="cert-badge"><i class="fas fa-award"></i> Google Cloud Gen AI Leader</span>
                 <span class="cert-badge"><i class="fas fa-award"></i> Red Hat — Ansible Automation</span>
                 <span class="cert-badge"><i class="fas fa-award"></i> AWS Solutions Architect — Associate</span>
