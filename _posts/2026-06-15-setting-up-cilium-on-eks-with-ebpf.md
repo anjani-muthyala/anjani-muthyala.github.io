@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting Up Cilium on EKS: Replacing kube-proxy with eBPF-Powered Networking"
-date: 2026-06-15 10:00:00 -0500
+date: 2026-06-15 10:00:00 +0530
 category: "DevOps"
 tags: [kubernetes, cilium, ebpf, eks, networking, aws]
 description: "A practical guide to deploying Cilium CNI on Amazon EKS with eBPF kube-proxy replacement. Learn why eBPF is transforming Kubernetes networking, observability, and security."
