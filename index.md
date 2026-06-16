@@ -69,8 +69,8 @@ keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, DevOps Engineer
         <span class="stat-label">Years Experience</span>
     </div>
     <div class="stat-card">
-        <span class="stat-number" data-count="3">0+</span>
-        <span class="stat-label">Certifications</span>
+        <span class="stat-number"><i class="fas fa-certificate"></i></span>
+        <span class="stat-label">Certified Pro</span>
     </div>
     <div class="stat-card">
         <span class="stat-number">AWS</span>
@@ -125,9 +125,10 @@ keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, DevOps Engineer
 
 <!-- ═══ CERTIFICATIONS ═══ -->
 <div class="certs-bar animate-on-scroll">
-    <span class="cert-badge"><i class="fas fa-award"></i> Google Cloud Gen AI Leader</span>
-    <span class="cert-badge"><i class="fas fa-award"></i> Red Hat — Ansible Automation</span>
-    <span class="cert-badge"><i class="fas fa-award"></i> AWS Solutions Architect — Associate</span>
+    <span class="cert-badge"><i class="fab fa-google"></i> Google AI Professional</span>
+    <span class="cert-badge"><i class="fab fa-google"></i> Google Cloud Gen AI Leader</span>
+    <span class="cert-badge"><i class="fab fa-redhat"></i> Red Hat — Ansible Automation</span>
+    <span class="cert-badge"><i class="fab fa-aws"></i> AWS Solutions Architect — Associate</span>
 </div>
 
 <!-- ═══ RECENT POSTS ═══ -->
