@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.subtitle }}{% endif %}</title>
+    <title>{% if page.url == '/' %}Anjani Kumar Muthyala — {{ site.subtitle }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}DevOps, AWS, Kubernetes, AI automation, cloud infrastructure, CI/CD, Ansible, Terraform{% endif %}">
     <meta name="author" content="{{ site.author.name }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     
     <!-- Open Graph -->
-    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% elsif page.url == '/about/' or page.url == '/' %}profile{% else %}website{% endif %}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
@@ -26,17 +26,24 @@
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/profile.jpeg' | absolute_url }}{% endif %}">
     
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="google-site-verification" content="xTufputGkC0_ZFO2jacU01xeqdkohspRsLCrm97sYfs">
     <meta name="theme-color" content="#0b0b0d">
     
-    <!-- Structured Data — Person (always present for brand) -->
+    {% if page.url == '/about/' or page.url == '/' %}
+    <meta property="profile:first_name" content="Anjani Kumar">
+    <meta property="profile:last_name" content="Muthyala">
+    <meta property="profile:username" content="anjani-muthyala">
+    {% endif %}
+    
+    <!-- Structured Data — Person (stable @id for entity disambiguation) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@id": "{{ site.url }}/#anjani",
       "@type": "Person",
       "name": "Anjani Kumar Muthyala",
-      "alternateName": ["Anjani Muthyala", "Anjani Kumar", "Anjani"],
+      "alternateName": ["Anjani Muthyala", "Anjani Kumar", "Anjani", "Anjani M", "Anjani K Muthyala"],
       "givenName": "Anjani Kumar",
       "familyName": "Muthyala",
       "jobTitle": "Senior DevOps Engineer",
@@ -46,15 +53,16 @@
         "url": "https://www.verizon.com"
       },
       "url": "{{ site.url }}",
+      "mainEntityOfPage": "{{ site.url }}/about/",
       "image": "{{ '/assets/images/profile.jpeg' | absolute_url }}",
       "email": "{{ site.email }}",
-      "description": "Senior DevOps Engineer at Verizon with 8+ years of experience in AWS, Kubernetes, Terraform, CI/CD, and AI-driven automation.",
+      "description": "Anjani Kumar Muthyala (Anjani) is a Senior DevOps Engineer at Verizon with 10+ years of experience in AWS, Kubernetes, Terraform, CI/CD, and AI-driven automation.",
       "sameAs": [
         "https://github.com/{{ site.social.github }}",
         "https://twitter.com/{{ site.social.twitter }}",
         "https://linkedin.com/in/{{ site.social.linkedin }}"
       ],
-      "knowsAbout": ["DevOps", "Amazon Web Services", "Kubernetes", "Terraform", "Ansible", "AI Automation", "Cloud Infrastructure", "CI/CD", "Docker", "Jenkins", "AWS Bedrock", "Agentic AI", "Site Reliability Engineering"],
+      "knowsAbout": ["DevOps", "Amazon Web Services", "Kubernetes", "Terraform", "Ansible", "AI Automation", "Cloud Infrastructure", "CI/CD", "Docker", "Jenkins", "AWS Bedrock", "Agentic AI", "Site Reliability Engineering", "eBPF", "Cilium"],
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
@@ -80,24 +88,102 @@
     }
     </script>
 
-    <!-- Structured Data — WebSite (enables sitelinks search box) -->
+    <!-- Structured Data — WebSite (enables sitelinks + entity connection) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Anjani Kumar Muthyala — DevOps & AI Blog",
-      "alternateName": ["Anjani Muthyala Blog", "Anjani Kumar Blog", "Anjani Blog"],
+      "alternateName": ["Anjani Muthyala Blog", "Anjani Kumar Blog", "Anjani Blog", "Anjani's Blog"],
       "url": "{{ site.url }}",
-      "author": {
-        "@type": "Person",
-        "name": "Anjani Kumar Muthyala"
-      },
+      "author": { "@id": "{{ site.url }}/#anjani" },
+      "publisher": { "@id": "{{ site.url }}/#anjani" },
       "description": "{{ site.description }}",
+      "inLanguage": "en-US",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "{{ site.url }}/archive/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    }
+    </script>
+
+    {% if page.url == '/about/' %}
+    <!-- Structured Data — ProfilePage (authoritative "who is Anjani" signal) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": { "@id": "{{ site.url }}/#anjani" },
+      "name": "About Anjani Kumar Muthyala",
+      "description": "Official profile page of Anjani Kumar Muthyala — Senior DevOps Engineer, Cloud Architect & AI Enthusiast.",
+      "url": "{{ site.url }}/about/",
+      "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- Structured Data — FAQPage (targets "who is anjani" / "anjani kumar" queries) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Anjani Kumar Muthyala?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anjani Kumar Muthyala (also known as Anjani Kumar or simply Anjani) is a Senior DevOps Engineer at Verizon with over 10 years of experience in cloud infrastructure, automation, and AI-driven systems. Anjani specializes in AWS, Kubernetes, Terraform, and Agentic AI, and holds certifications including AWS Solutions Architect, Red Hat Ansible Automation, and Google Cloud Gen AI Leader."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Anjani Kumar do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anjani designs and manages large-scale cloud infrastructure at Verizon, builds CI/CD pipelines using Jenkins and Ansible, orchestrates Kubernetes clusters on AWS EKS, and develops Agentic AI workflows on AWS Bedrock for autonomous infrastructure management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certifications does Anjani hold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anjani Kumar Muthyala holds the Google AI Professional Certificate, AWS Solutions Architect – Associate, Red Hat Certified Specialist in Ansible Automation, and Google Cloud Gen AI Leader certifications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Anjani Kumar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach Anjani via email at muthyala.anjani@gmail.com, connect on LinkedIn at linkedin.com/in/anjani-kumar-muthyala, follow on Twitter @anjanikumar_m, or check out his projects on GitHub at github.com/anjani-muthyala."
+          }
+        }
+      ]
+    }
+    </script>
+    {% endif %}
+
+    <!-- Structured Data — BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anjani Kumar Muthyala",
+          "item": "{{ site.url }}"
+        }{% if page.url != '/' %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{% if page.title %}{{ page.title }}{% else %}Page{% endif %}",
+          "item": "{{ page.url | absolute_url }}"
+        }{% endif %}
+      ]
     }
     </script>
 
@@ -109,21 +195,14 @@
       "@type": "BlogPosting",
       "headline": "{{ page.title }}",
       "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
-      "author": {
-        "@type": "Person",
-        "name": "Anjani Kumar Muthyala",
-        "url": "{{ site.url }}"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Anjani Kumar Muthyala",
-        "url": "{{ site.url }}"
-      },
+      "author": { "@id": "{{ site.url }}/#anjani" },
+      "publisher": { "@id": "{{ site.url }}/#anjani" },
       "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "dateModified": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
       "url": "{{ page.url | absolute_url }}",
       "mainEntityOfPage": "{{ page.url | absolute_url }}",
-      "image": "{{ '/assets/images/profile.jpeg' | absolute_url }}"
+      "image": "{{ '/assets/images/profile.jpeg' | absolute_url }}",
+      "inLanguage": "en-US"
     }
     </script>
     {% endif %}
@@ -245,6 +324,44 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-bubble" id="chatBubble" aria-label="Open chat">
+            <i class="fas fa-comment-dots chat-bubble-icon"></i>
+            <i class="fas fa-times chat-bubble-close"></i>
+        </button>
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-panel-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <img src="{{ '/assets/images/profile.jpeg' | relative_url }}" alt="Anjani">
+                    </div>
+                    <div>
+                        <h4>Anjani Kumar</h4>
+                        <span class="chat-status"><span class="chat-status-dot"></span> Typically replies within a day</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chatClose" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-panel-body" id="chatBody">
+                <div class="chat-message chat-message-bot">
+                    <p>Hi! 👋 Have a question or want to collaborate? Send me a message and I'll get back to you via email.</p>
+                </div>
+            </div>
+            <form class="chat-form" id="chatForm">
+                <input type="text" name="from_name" placeholder="Your name" required class="chat-input">
+                <input type="email" name="reply_to" placeholder="Your email" required class="chat-input">
+                <textarea name="message" placeholder="Your message..." required class="chat-input chat-textarea"></textarea>
+                <button type="submit" class="chat-send" id="chatSend">
+                    <span class="chat-send-text">Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <script>
     (function() {
         // ═══ THEME ═══
@@ -345,6 +462,55 @@
                 });
             }, { threshold: 0.5 });
             obs.observe(el);
+        });
+
+        // ═══ CHAT WIDGET ═══
+        const chatBubble = document.getElementById('chatBubble');
+        const chatPanel = document.getElementById('chatPanel');
+        const chatClose = document.getElementById('chatClose');
+        const chatForm = document.getElementById('chatForm');
+        const chatBody = document.getElementById('chatBody');
+        const chatWidget = document.getElementById('chatWidget');
+        const GITHUB_REPO = '{{ site.social.github }}/{{ site.social.github }}.github.io';
+
+        chatBubble.addEventListener('click', () => {
+            chatWidget.classList.toggle('open');
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWidget.classList.remove('open');
+        });
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = chatForm.from_name.value.trim();
+            const email = chatForm.reply_to.value.trim();
+            const message = chatForm.message.value.trim();
+
+            const title = encodeURIComponent('Contact: ' + name);
+            const body = encodeURIComponent(
+                '**From:** ' + name + '\n' +
+                '**Email:** ' + email + '\n\n' +
+                '---\n\n' +
+                message + '\n\n' +
+                '---\n_Sent via chat widget on ' + new Date().toLocaleString() + '_'
+            );
+
+            const issueUrl = 'https://github.com/' + GITHUB_REPO + '/issues/new?title=' + title + '&body=' + body + '&labels=contact';
+
+            const msg = document.createElement('div');
+            msg.className = 'chat-message chat-message-user';
+            msg.innerHTML = '<p>' + message.replace(/</g, '&lt;').substring(0, 100) + (message.length > 100 ? '...' : '') + '</p>';
+            chatBody.appendChild(msg);
+
+            const reply = document.createElement('div');
+            reply.className = 'chat-message chat-message-bot';
+            reply.innerHTML = '<p>Opening GitHub to submit your message. Please click "Submit new issue" to send it.</p>';
+            chatBody.appendChild(reply);
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            window.open(issueUrl, '_blank');
+            chatForm.reset();
         });
 
     })();

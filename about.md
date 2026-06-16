@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "About Anjani Kumar Muthyala — Senior DevOps Engineer & AI Leader at Verizon"
-description: "Anjani Kumar Muthyala is a Senior DevOps Engineer at Verizon with 8+ years experience in AWS, Kubernetes, Terraform, AI automation, and cloud infrastructure. Learn about his expertise, certifications, and projects."
+title: "About Anjani Kumar Muthyala"
+description: "Who is Anjani Kumar Muthyala? Anjani is a Senior DevOps Engineer at Verizon with 10+ years in AWS, Kubernetes, Terraform & AI automation. Learn about Anjani Kumar's expertise, certifications, and projects."
 permalink: /about/
-keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, about, DevOps engineer, AWS expert, Kubernetes specialist, AI automation, cloud infrastructure, Verizon, Senior DevOps Engineer"
+keywords: "Anjani, Anjani Kumar, Anjani Kumar Muthyala, Anjani Muthyala, who is Anjani Kumar, about Anjani, Anjani DevOps, Anjani Verizon, DevOps engineer, AWS, Kubernetes, AI automation"
 ---
 
 <div class="about-container">
@@ -23,7 +23,7 @@ keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, about, DevOps e
         <h2>Hello! 👋</h2>
         <p>I'm a Senior DevOps Engineer currently working at <strong>Verizon</strong>, specializing in building scalable infrastructure, implementing CI/CD pipelines, and exploring the exciting world of Agentic AI for autonomous system operations.</p>
         
-        <p>With over <strong>8 years of experience</strong> in DevOps and cloud technologies, I've had the privilege of working with cutting-edge technologies and solving complex infrastructure challenges. I'm passionate about advancing AI-driven automation — particularly in autonomous planning, validation, and remediation systems.</p>
+        <p>With over <strong>10+ years of experience</strong> in DevOps and cloud technologies, I've had the privilege of working with cutting-edge technologies and solving complex infrastructure challenges. I'm passionate about advancing AI-driven automation — particularly in autonomous planning, validation, and remediation systems.</p>
 
         <h3>What I Do</h3>
         <ul class="about-list">
@@ -131,6 +131,47 @@ keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, about, DevOps e
             <a href="{{ '/assets/Anjani_Muthyala_Resume.pdf' | relative_url }}" target="_blank" rel="noopener" class="connect-link primary-link">
                 <i class="fas fa-download"></i> Download Resume
             </a>
+        </div>
+    </div>
+
+    <!-- FAQ — targets "who is anjani" / "anjani kumar" search queries -->
+    <div class="about-section animate-on-scroll" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Who is Anjani Kumar Muthyala?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                    <p>Anjani Kumar Muthyala (also known as Anjani Kumar or simply Anjani) is a Senior DevOps Engineer at Verizon with over 10 years of experience in cloud infrastructure, automation, and AI-driven systems. Anjani specializes in AWS, Kubernetes, Terraform, and Agentic AI, and holds certifications including AWS Solutions Architect, Red Hat Ansible Automation, and Google Cloud Gen AI Leader.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What does Anjani Kumar do?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                    <p>Anjani designs and manages large-scale cloud infrastructure at Verizon, builds CI/CD pipelines using Jenkins and Ansible, orchestrates Kubernetes clusters on AWS EKS, and develops Agentic AI workflows on AWS Bedrock for autonomous infrastructure management. He also writes about DevOps, AI automation, and cloud architecture on his blog.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What certifications does Anjani hold?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                    <p>Anjani Kumar Muthyala holds the following certifications: Google AI Professional Certificate, AWS Solutions Architect – Associate, Red Hat Certified Specialist in Ansible Automation, and Google Cloud Gen AI Leader.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How can I contact Anjani Kumar?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <div itemprop="text">
+                    <p>You can reach Anjani via email at muthyala.anjani@gmail.com, connect on <a href="https://linkedin.com/in/anjani-kumar-muthyala">LinkedIn</a>, follow on <a href="https://twitter.com/anjanikumar_m">Twitter</a>, or check out his projects on <a href="https://github.com/anjani-muthyala">GitHub</a>.</p>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,8 +1,7 @@
 ---
 layout: default
-title: "Anjani Kumar Muthyala — Senior DevOps Engineer, Cloud Architect & AI Enthusiast"
-description: "Anjani Kumar Muthyala is a Senior DevOps Engineer at Verizon specializing in AWS, Kubernetes, Terraform, CI/CD, and AI-driven automation. Explore his blog, resume, and projects."
-keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, DevOps Engineer, AWS, Kubernetes, Terraform, AI automation, Verizon, cloud architect, CI/CD"
+description: "Anjani Kumar Muthyala (Anjani) — Senior DevOps Engineer at Verizon. 10+ years in AWS, Kubernetes, Terraform, CI/CD & AI automation. Blog, resume & projects by Anjani Kumar."
+keywords: "Anjani, Anjani Kumar, Anjani Kumar Muthyala, Anjani Muthyala, Anjani DevOps, Anjani Kumar DevOps, Anjani Verizon, DevOps Engineer, AWS, Kubernetes, Terraform, AI automation, cloud architect"
 ---
 
 <!-- ═══ HERO ═══ -->
@@ -65,7 +64,7 @@ keywords: "Anjani Kumar Muthyala, Anjani Muthyala, Anjani Kumar, DevOps Engineer
 <!-- ═══ STATS ═══ -->
 <div class="stats-grid animate-on-scroll">
     <div class="stat-card">
-        <span class="stat-number" data-count="8">0+</span>
+        <span class="stat-number" data-count="10">0+</span>
         <span class="stat-label">Years Experience</span>
     </div>
     <div class="stat-card">
