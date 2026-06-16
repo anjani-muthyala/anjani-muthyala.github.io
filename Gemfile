@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.0"
-gem "jekyll-theme-architect"
+# GitHub Pages controls the Jekyll version (currently Jekyll 3.9.x).
+# Do not also pin `jekyll` directly or it will conflict with this gem.
 gem "github-pages", "~> 228", group: :jekyll_plugins
 
 group :jekyll_plugins do
